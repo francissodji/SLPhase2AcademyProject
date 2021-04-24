@@ -29,4 +29,34 @@
     <servlet-name>ListClassSubjectController</servlet-name>
     <url-pattern>/ListClassSubject</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListSubjectController</display-name>
+    <servlet-name>ListSubjectController</servlet-name>
+    <servlet-class>com.controller.ListSubjectController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListSubjectController</servlet-name>
+    <url-pattern>/ListSubject</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListTeacherController</display-name>
+    <servlet-name>ListTeacherController</servlet-name>
+    <servlet-class>com.controller.ListTeacherController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListTeacherController</servlet-name>
+    <url-pattern>/ListTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddTeacherController</display-name>
+    <servlet-name>AddTeacherController</servlet-name>
+    <servlet-class>com.controller.AddTeacherController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddTeacherController</servlet-name>
+    <url-pattern>/AddTeacher</url-pattern>
+  </servlet-mapping>
 </web-app>

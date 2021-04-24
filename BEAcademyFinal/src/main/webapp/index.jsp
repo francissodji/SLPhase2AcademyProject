@@ -13,9 +13,9 @@
  crossorigin="anonymous">
 </head>
 <body>
-
+<h1>User Login</h1>
  <div class="container col-md-8 col-md-offset-3" style="overflow: auto">
-  <h1>Login Form</h1>
+ 
   <form action="<%=request.getContextPath()%>/UserLogin" method="post">
    <div class="form-group">
     <label for="uname">User Name:</label> <input type="text"

@@ -48,7 +48,7 @@ public class TeacherDaoImplem implements TeacherDao{
 		Session session = factory.openSession();
 		Transaction trans = session.beginTransaction();
 		
-		String hql = "FROM teacher";
+		String hql = "FROM Teacher";
 		@SuppressWarnings("unchecked")
 		TypedQuery<Teacher> query = session.createQuery(hql);
 		

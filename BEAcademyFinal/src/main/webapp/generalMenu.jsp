@@ -8,19 +8,34 @@
 </head>
 <body>
 
-	<h1>GENEREL MENU</h1>
+	<h1>GENERAL MENU</h1>
 	
 	<div>
 		<div>
-			<form action="<%=request.getContextPath()%>/ListClassSubject" method="get">
-			<label for="listclsub">Edit List of Classes and Subjects :</label>
+			<a href="<%=request.getContextPath()%>/addTeacher.jsp">Set up a master list of all the teachers</a>
+			<!--<form action="<%=request.getContextPath()%>/AddTeacher" method="post">-->
+			<!--<label for="listclsub">Edit List of Classes and Subjects :</label>-->
+			<!--	<button type="submit" class="btn btn-primary">Edit</button>-->
+			<!--</form>-->
+		</div>
+		
+		<div>
+			<form action="<%=request.getContextPath()%>/ListClasses" method="get">
+				<label for="listClass">Edit List of Classes :</label>
 				<button type="submit" class="btn btn-primary">Edit</button>
 			</form>
 		</div>
 		
 		<div>
-			<form action="<%=request.getContextPath()%>/DestinationAction" method="get">
-				<label for="listDest">Edit List of Destination :</label>
+			<form action="<%=request.getContextPath()%>/ListSubject" method="get">
+				<label for="listSubj">Edit List of Subject :</label>
+				<button type="submit" class="btn btn-primary">Edit</button>
+			</form>
+		</div>
+		
+		<div>
+			<form action="<%=request.getContextPath()%>/ListTeacher" method="get">
+				<label for="listTeach">Edit List of Teacher :</label>
 				<button type="submit" class="btn btn-primary">Edit</button>
 			</form>
 		</div>

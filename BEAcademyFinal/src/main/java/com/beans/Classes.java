@@ -33,6 +33,13 @@ public class Classes {
 	private Set<Subject> subjects;
 	
 
+
+	
+	public Classes() {
+		
+	}
+
+
 	public Classes(String designClasses) {
 
 		this.designClasses = designClasses;

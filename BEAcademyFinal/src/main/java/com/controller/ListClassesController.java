@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,10 +36,20 @@ public class ListClassesController extends HttpServlet {
 		
 		ClassesDao classDoa = new ClassesDaoImplem();
 		
-		List<Classes> listOfAllClass = classDoa.getlistAllClasses();
-		HttpSession httpSession = request.getSession();
 		
-		httpSession.setAttribute("listOfAllClass", listOfAllClass);
+		try {
+			List<Classes> listOfAllClass = classDoa.getlistAllClasses();
+			HttpSession httpSession = request.getSession();
+			
+			httpSession.setAttribute("listOfAllClass", listOfAllClass);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("displayListOfClass.jsp");
+			dispatcher.forward(request, response);
+			
+		} catch (ServletException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 

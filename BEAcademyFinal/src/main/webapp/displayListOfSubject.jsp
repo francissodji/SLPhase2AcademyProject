@@ -1,6 +1,5 @@
-
 <%@page import="java.util.List" %>
-<%@page import ="com.beans.Classes" %>
+<%@page import="com.beans.Subject" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -10,29 +9,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>List of all Classes</h1>
-
+	
+	<h1>List of all Subjects</h1>
 	<div>
+
 		<table border=1>
 		
-			<tr><th>Class Designation</th></tr>
+			<tr><th>Subject Designation</th></tr>
 			
 			<% 
-				List<Classes> aListOfAllClass = (List<Classes>)session.getAttribute("listOfAllClass");
+				List<Subject> aListOfAllSubject = (List<Subject>)session.getAttribute("listOfAllSubject");
 				
 			
-				for(Classes aClass : aListOfAllClass)
+				for(Subject aSubject : aListOfAllSubject)
 				{
 			%>
 					<tr>
-						<td><%=aClass.getDesignClasses()%></td>
+						<td><%=aSubject.getDesignSubject()%></td>
 					</tr>
 			<%		
 				}
 			%>
 		</table>
 	</div>
-	
-
 </body>
 </html>

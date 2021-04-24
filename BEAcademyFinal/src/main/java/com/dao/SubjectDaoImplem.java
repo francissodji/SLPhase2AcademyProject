@@ -24,6 +24,8 @@ public class SubjectDaoImplem implements SubjectDao{
         Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
         factory = meta.getSessionFactoryBuilder().build();
     }
+    
+    
 	@Override
 	public Integer AddSubject(Subject subject) {
 		Integer SubjectId = null;
@@ -44,10 +46,11 @@ public class SubjectDaoImplem implements SubjectDao{
 		Session session = factory.openSession();
 		Transaction trans = session.beginTransaction();
 		
-		String hql = "FROM subject";
+		String hql = "FROM Subject";
 		@SuppressWarnings("unchecked")
 		TypedQuery<Subject> query = session.createQuery(hql);
 		
+		allSubject = query.getResultList();
 		return allSubject;
 	}
 
